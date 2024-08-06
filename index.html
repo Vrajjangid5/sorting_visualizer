@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="sorting.css">
+    <style>
+        /* Basic styling for the bars */
+        .bar {
+            display: inline-block;
+            width: 10px;
+            margin-right: 2px;
+            background-color: blue;
+        }
+        /* Styling for the container */
+        #barsContainer {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 200px;
+            margin-top: 20px;
+        }
+        .navbar span {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .navbar label {
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrappers">
+        <div class="navbar">
+            <h1>Sorting Visualizer</h1>
+            <span>
+                <label for="arr_sz">Size</label>
+                <!-- Number of bars -->
+                <input id="arr_sz" type="range" min="20" max="120" step="1" value="60">
+            </span>
+            <span>
+                <label for="speed_input">Speed</label>
+                <!-- Speed of sorting -->
+                <input id="speed_input" type="range" min="1" max="100" step="1" value="50">
+            </span>
+        </div>
+        <div class="btn">
+            <button id="array">New Array</button>
+            <button id="bubble">Bubble Sort</button>
+            <button id="selection">Selection Sort</button>
+            <button id="insertion">Insertion Sort</button>
+            <button id="quick">Quick Sort</button>
+            <button id="merge">Merge Sort</button>
+        </div>
+    </div>
+    <div id="barsContainer"></div>
+
+    <script src="script.js"></script>
+    <script src="js_files/bubble.js"></script>
+    <script src="js_files/merge.js"></script>
+    <script src="js_files/selection.js"></script>
+    <script src="js_files/quick.js"></script>
+    <script src="js_files/insertion.js"></script>
+</body>
+</html>

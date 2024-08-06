@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.navbar span {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.navbar label {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+.navbar input[type="range"] {
+    margin: 0 10px;
+}
+.navbar button {
+    padding: 10px;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.navbar button:hover {
+    background: #555;
+}
+.btn {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #fff;
+    transition: background 0.3s, transform 0.3s;
+}
+.btn button:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+.btn button.active {
+    background: #d0d0d0;
+    border-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar h1 {
+        margin-bottom: 10px;
+    }
+    .navbar span {
+        margin: 5px 0;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+body.dark-mode .navbar {
+    background-color: #222;
+}
+body.dark-mode .navbar button {
+    background: #333;
+}
+body.dark-mode .navbar button:hover {
+    background: #444;
+}
+body.dark-mode .btn button {
+    background: #444;
+    border: 1px solid #555;
+}
+body.dark-mode .btn button:hover {
+    background: #555;
+}
+body.dark-mode .btn button.active {
+    background: #666;
+    border-color: #fff;
+}
